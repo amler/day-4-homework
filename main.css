@@ -459,9 +459,6 @@ body {
 	bottom: 0;
 }
 
-
-
-
 .white7-row5 {
 	background: #fff;
 	height: 90px;
@@ -480,4 +477,28 @@ body {
 	position: absolute;
 	right: 0;	
 	bottom: 0;
+}
+
+/* Navigation menu html5 tag */
+
+nav ul ul {
+	display: none; /* hides my sub lists */
+}
+
+nav ul li:hover > ul {
+	display: block; /* shows my sub lists on list elm */
+}
+
+/* nav color */
+nav ul {
+	background: #f2f6f8;
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);	border-radius: 5px;
+	box-shadow: 0 1px 3px #050B26;
+	display: inline-table;
+	list-style: none;
+	position: relative;
+}
+
+nav ul:after {
+	content: ""; clear: both; display: block;
 }
