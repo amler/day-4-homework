@@ -189,12 +189,13 @@ nav ul ul ul {
 	}
 }
 
-
+/* Caption on hover css */
 .image-caption {
 	position: relative;
 	overflow: hidden;
 	width: 450px;
 }
+
 .image-caption p {
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
@@ -209,6 +210,7 @@ nav ul ul ul {
 .image-caption:hover p {
 	left: 0;
 }
+/* END caption on hover css */
 
 /* card flip */
 
@@ -248,18 +250,18 @@ nav ul ul ul {
 }
 
 .front {
-	background: url(images/bg.jpg);
+	background: url(./img/front-card.png);
 	background-size: cover;
 	z-index: 10;
 }
 
 .back {
-	background: url(images/bg.jpg)
+	background: url(./img/back-card.png);
 	background-size: cover;
 	-webkit-transform: rotateY(180deg);
 			transform: rotateY(180deg);
 }
-
+/* end card flip css*/
 
 .room {
 	height: 600px;
