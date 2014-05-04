@@ -79,7 +79,7 @@ nav ul li:hover {
 nav ul li:hover a {
 	color: #fff;
 }
-	
+
 nav ul li a {
 	display: block; 
 	padding: 25px 40px;
@@ -115,6 +115,15 @@ nav ul ul ul {
 	position: absolute; 
 	left: 100%; 
 	top:0;
+}
+
+nav > ul > li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+nav > ul > li:last-child {
+	border-top-right-radius: 5px;
+	/*border-bottom-right-radius: 5px;*/
 }
 
 
@@ -252,12 +261,14 @@ nav ul ul ul {
 
 .front {
 	background: url(./img/back-card.png);
+	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 10;
 }
 
 .back {
 	background: url(./img/front-card.png);
+	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-transform: rotateY(180deg);
 			transform: rotateY(180deg);
@@ -267,13 +278,15 @@ nav ul ul ul {
 
 @-webkit-keyframes circleresize {
 	0%, 100% {
-
 	height: 100px;
 	width: 100px;
 	}
+
 	50% {
 	height: 50px;
 	width: 50px;
+	-webkit-box-shadow: 0px 10px 1px 15px #7a39b3;
+		box-shadow: 0px 10px 1px 15px #7a39b3;
 	}
 }
 @keyframes circleresize {
@@ -281,6 +294,7 @@ nav ul ul ul {
 	height: 100px;
 	width: 100px;
 	}
+
 	50% {
 	height: 50px;
 	width: 50px;
@@ -294,15 +308,15 @@ nav ul ul ul {
 	background: #b274e8;
 	border-radius: 50%;
 	-webkit-box-shadow: 0px 5px 1px 6px #7a39b3;
-  			box-shadow: 0px 5px 1px 6px #7a39b3;
+			box-shadow: 0px 5px 1px 6px #7a39b3;
  
-			animation-duration: 3s;
 	-webkit-animation-duration: 3s;
-			animation-iteration-count: infinite;
+			animation-duration: 3s;
 	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
 	
-			animation-name: circleresize;
 	-webkit-animation-name: circleresize; 
+			animation-name: circleresize;
 }
 
 
@@ -363,11 +377,14 @@ nav ul ul ul {
 }
 
 .text-container {
-	position: relative;
 	height: 100px;
+	margin: 0;
+	padding: 0;
+	position: relative;
 }
 
 .rotating-text {
+	font-size: 40px;
 	position: absolute;
 	-webkit-transform-origin: top center;
 	 		transform-origin: top center;
@@ -381,6 +398,352 @@ nav ul ul ul {
 			animation-iteration-count: infinite;
 
 }
-.room {
-	height: 600px;
+.rotating-text {
+	margin: 0;
+	padding: 0;
+}
+
+.button-1-space {
+	position: relative;
+	height: 100px;
+}
+
+.button-1 {
+	background: #70EAB5;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	font-size: 3em;
+	height: 100px;
+	text-align: center;
+	width: 100px;
+	line-height: 80px;
+	text-shadow: 0 -2px 1px #666;
+	position: absolute;
+	bottom: 0;
+	box-shadow: inset 0 -5px 0 4px #60C9BD,
+				0 -2px 3px #666;
+	transition: all 0.1s ease;
+}
+ 
+.button-1:hover {
+	box-shadow: inset 0 -3px 0 2px #60C9BD,
+				0 -2px 3px #666;
+	height: 90px;
+	text-shadow: 0 1px 1px #666;
+}
+ 
+.button-1:active {
+	background: #37E898;
+	box-shadow: inset 0px 7px 0px #17C6B2,
+				0 -1px 4px #666;
+	height: 70px;
+	text-shadow: 0 2px 1px #666;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+	}
+
+	40% {
+	-webkit-transform: translateY(-60px);
+			transform: translateY(-60px);
+	}
+
+	60% {
+	-webkit-transform: translateY(-30px);
+			transform: translateY(-30px);
+	}
+}
+
+.bouncingball {
+	background: #c146a1;
+	border-radius: 50%;
+	box-shadow: inset 0 -5px 0 4px #a80077;
+	height: 100px;
+	width: 100px;
+	-webkit-animation-name: bounce;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.button-2 {
+	background: green;
+	color: #fff;
+	cursor: pointer;
+	font-size: 30px;
+	height: 200px;
+	width: 400px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.translucent-button p {
+	border: 3px solid #fff;
+	border-radius: 50px;
+	margin: 40px 50px 0 50px;
+	padding: 25px 50px;
+	text-align: center;
+	position: relative;
+}
+
+.translucent-button:hover p {
+	background: rgba(101, 105, 111, 0.73);
+}
+
+.translucent-button i {
+	position: absolute;
+	opacity: 0;
+	right: 50px;
+	transition: all .4s ease;
+}
+
+.translucent-button:hover i {
+ 	right: 25px;
+ 	opacity: 1;
+}
+
+.loading { 
+	background: #666;
+	border-radius: 30px;
+	height: 20px;
+	padding: 5px 5px 8px;
+	position: relative;
+}
+.loading > div {
+	background-color: rgb(43,194,83);
+	border-radius: 8px;
+	background-image: -webkit-gradient(linear, left bottom,left top, color-stop(0, rgb(43,194,83)),color-stop(1, rgb(84,240,84)));
+	box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+				inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+	display: block;
+	height: 110%;
+	position: relative;
+	overflow: hidden;
+	width: 0;
+	-webkit-animation-name: loadingprogress;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes loadingprogress {
+	0%, 10% { 
+		width: 0; 
+	}
+
+	25%, 30% {
+		width: 25%;
+	}
+	60%, 80% {
+		width: 50%
+	}
+
+	100% { 
+		width: 100%; 
+	}
+}
+
+
+.relativebox {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+}
+
+
+.yellow-circle {
+	width: 200px;
+	height: 200px;
+	background: rgba(255, 235, 0, 0.7);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 25px;
+}
+
+.green-circle {
+	width: 200px;
+	height: 200px;
+	background: rgba(0, 255, 0, 0.7);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 300px;
+}
+
+.red-circle {
+	width: 200px;
+	height: 200px;
+	background: rgba(255, 0, 0, 0.7);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	right: 450px;
+}
+
+.blue-box {
+	width:200px;
+	height:200px;
+	background:rgba(0,0,255,0.5);
+	position:absolute;
+	top: 0;
+	right: 0;
+	-webkit-animation: slidingbox 5s infinite;
+}
+
+@-webkit-keyframes slidingbox {
+	0%, 100% {
+	right: 100%;
+	}
+	50% {
+	right: 0;
+	}
+}
+
+/* scaling  */
+@-webkit-keyframes scaling {
+	0%, 100% {
+	-webkit-transform: scale(1);
+			transform: scale(1);
+	}
+
+	30% {
+	-webkit-transform: scaleX (1.5) scaleY(0.75);
+			transform: scaleX(1.5) scaleY(0.75);
+	}
+
+	40% {
+	-webkit-transform: scaleX(0.75) scaleY(1.25);
+			transform: scaleX(0.75) scaleY(1.25);
+	}
+
+	60% {
+	-webkit-transform: scaleX(1.15) scaleY(0.85);
+			transform: scaleX(1.15) scaleY(0.85);
+	}
+}
+
+
+.scaling-box {
+	background: #f08;
+	color: #fff;
+	font-size: 36px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	width: 100%;
+	-webkit-animation-name: scaling;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+
+}
+
+.george {
+	background: url(./img/george.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 325px;
+	height: 358px;
+	position: relative;
+}
+
+.eye {
+	background: #000;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	-webkit-animation-name: googlyeyes;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes googlyeyes {
+
+	0%, 100% {
+	-webkit-transform: scale(1);
+			transform: scale(1);
+	}
+
+	50% {
+	-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+	}
+}
+
+.left {
+	left: 100px;
+	top: 65px;
+}
+.right {
+	left: 140px;
+	top: 65px;
+}
+
+.george-mouth {
+	background: red;
+	border: 1px solid #000;
+	border-radius: 1px 1px 50px 50px ;
+	top: 120px;
+	width: 40px;
+	height: 30px;
+	left: 120px;
+	position: absolute;
+	-webkit-animation-name: georgelol;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: top center;
+}
+
+@-webkit-keyframes georgelol {
+
+	0%, 100% {
+	-webkit-transform: scale(1);
+			transform: scale(1);
+	}
+
+	20% {
+	-webkit-transform: scaleY(0.30);
+			transform: scaleY(0.30);
+	}
+
+	30% {
+	-webkit-transform: scaleY(0.75);
+			transform: scaleY(0.75);
+	}
+
+	60% {
+	-webkit-transform: scaleY(0.5);
+			transform: scaleY(0.5);
+	}
+
+	80% {
+	-webkit-transform: scaleY(0.30);
+			transform: scaleY(0.30);
+	}
+}
+
+.waldocrowd {
+	background: url(./img/waldocrowd.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 375px;
+	width: 500px;
+	overflow: hidden;
+	position: relative;
+}
+
+.waldocrowd img {
+	position: absolute;
+	bottom: -100%;
+	width: 100%;
+	transition: bottom 0.5s ease-in;
+}
+
+.waldocrowd:hover img {
+	bottom: 0;
 }
