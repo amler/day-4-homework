@@ -731,7 +731,9 @@ nav > ul > li:last-child {
 	background: url(./img/waldocrowd.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	cursor: pointer;
 	height: 375px;
+	margin-bottom: 50px;
 	width: 500px;
 	overflow: hidden;
 	position: relative;
@@ -747,3 +749,186 @@ nav > ul > li:last-child {
 .waldocrowd:hover img {
 	bottom: 0;
 }
+
+/* text field */
+input, 
+textarea {
+	width: 280px;
+	-webkit-transition: all 1s ease;  
+	transition: all 1s ease;
+}  
+
+input:focus, 
+textarea:focus {
+	width: 340px;
+	outline: none;
+	border-color: #F08;
+	box-shadow: 0 0 10px #f08;
+}
+
+/*svg george*/
+.georgesvg {
+	background: url(./img/george.png);
+	background-size: 100% 100%;
+	width: 432px;
+}
+
+.georgesvg svg {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.svgpath {
+	stroke: #f08; 
+	fill: rgba(0, 224, 255, 0.14); 
+	stroke-width: 10;
+	stroke-dasharray: 100;
+	-webkit-animation: dash 5s linear;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes dash {
+	to {
+	stroke-dashoffset: 1000;
+	}
+}
+
+.hor-zebra {
+	border-collapse: collapse;
+	font-size: 12px;
+	margin: 20px;
+	-webkit-perspective: 1000;
+	text-align: left;
+	width: 80%;
+}
+
+.hor-zebra th {
+	background: #7DA862;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 8px;
+}
+
+.hor-zebra:hover tr {
+	color: #333;
+	opacity: 0.25;
+	-webkit-transition: all .3s ease;  
+			transition: all .3s ease;
+}
+
+.hor-zebra td {
+	padding: 10px;
+}
+
+.hor-zebra tr:hover {
+	background: #cee7be;
+	opacity: 1;
+	-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+
+}
+.megaman {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/megaman.png);
+    
+    -webkit-animation: play .8s steps(10) infinite;
+            animation: play .8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+	from {
+		background-position: 0px; 
+	}
+	to {
+		background-position: -400px;
+	}
+}
+
+@keyframes play {
+	from {
+		background-position: 0px; 
+	}
+	to {
+		background-position: -400px;
+	}
+}
+
+.highlight span {
+	-webkit-transition: background-color 1s ease-in;  
+			transition: background-color 1s ease-in;
+}
+
+.highlight:hover span {
+	background-color: yellow;
+	color: #000;
+}
+
+.highlight:hover {
+	color: #999;
+	-webkit-transition: color .5s linear;  
+			transition: color .5s linear;
+}
+
+.wave-container {
+	height: 426px;
+	margin-bottom: 80px;
+	position: relative;
+	width: 820px;
+}
+
+.wave-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.wave-container .waves {
+	opacity: 0;
+	-webkit-transition: opacity 1s ease;  
+			transition: opacity 1s ease;
+}
+
+.wave-container:hover .waves {
+	opacity: 1;
+}
+
+
+.cardfan {
+	position: relative;
+}
+
+.card-deck {
+	background: url(./img/back-card.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 240px;
+	width: 160px;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all .5s ease;
+}
+
+.cardfan:hover .ace {
+	-webkit-transform: rotate(30deg) translate(30px, 30px);
+	transform: rotate(30deg) translate(30px, 30px);
+} 
+.cardfan:hover .king {
+	-webkit-transform: rotate(15deg) translate(15px, 15px);
+	transform: rotate(15deg) translate(15px, 15px);
+} 
+
+.cardfan:hover .jack {
+	-webkit-transform: rotate(-15deg) translate(-15px, -15px);
+	transform: rotate(-15deg) translate(-15px, -15px);
+} 
+
+
+
+
+
+.room {
+	height: 900px;
+}
+
+
