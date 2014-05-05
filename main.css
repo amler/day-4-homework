@@ -27,13 +27,13 @@ body {
 	height: 150px;
 	background-color: green;
 	-webkit-transition: all 2s linear;
-	transition: all 2s linear;
+		transition: all 2s linear;
 }
 .rotating-box:hover {
 	background-color: yellow;
 	margin-left: 400px;
 	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
+			transform: rotate(360deg);
 }
 
 
@@ -59,18 +59,12 @@ nav ul li {
 }
 nav ul li:hover > ul {
 	display: block; /* shows my sub lists on list elm */
-	        animation-duration: .5s;
 	-webkit-animation-duration: .5s;
-	        animation-name: flash;
+	        animation-duration: .5s;
 	-webkit-animation-name: flash;
+	        animation-name: flash;
 }
 
-/* clearing lists
-nav ul:after { 
-	clear: both; 
-	display: block;
-}
-*/
 nav ul li:hover {
 	background: #F08;
 	background: linear-gradient(top, #2D8089 0%, #1B6887 40%);
@@ -87,7 +81,6 @@ nav ul li a {
 	text-decoration: none;
 }
 
-
 /* sublist styling separatly from parent */
 nav ul ul {
 	background: #6b727c; 
@@ -103,6 +96,7 @@ nav ul ul li {
 	border-bottom: 1px solid #575f6a;
 	position: relative;
 }
+
 nav ul ul li a {
 	padding: 15px 20px;
 	color: #fff;
@@ -110,45 +104,44 @@ nav ul ul li a {
 nav ul ul li a:hover {
 	background: #4b545f;
 }
+
 /* to the right*/
 nav ul ul ul {
 	position: absolute; 
 	left: 100%; 
 	top:0;
 }
-
+/* fixed those square corners when pink */
 nav > ul > li:first-child {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
 nav > ul > li:last-child {
 	border-top-right-radius: 5px;
-	/*border-bottom-right-radius: 5px;*/
+	/* border-bottom-right-radius: 5px; liked better without */
 }
 
 
 @-webkit-keyframes spin {
 	0% {
-		        transform: rotate(0deg);
-		    -ms-transform: rotate(0deg);
 		-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
 	}
 	100% {
-		        transform: rotate(360deg);
-		    -ms-transform: rotate(360deg);
 		-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
 	}
 }
+
 @keyframes spin {
  	0% {
- 		        transform: rotate(0deg);
-		    -ms-transform: rotate(0deg);
 		-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
 	}
  	100% {
- 		        transform: rotate(360deg);
-		    -ms-transform: rotate(360deg);
 		-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+
 	}
 }
 .spinner {
@@ -864,10 +857,13 @@ textarea:focus {
 	color: #000;
 }
 
-.highlight:hover {
-	color: #999;
+.highlight {
 	-webkit-transition: color .5s linear;  
 			transition: color .5s linear;
+}
+
+.highlight:hover {
+	color: #999;
 }
 
 .wave-container {
@@ -896,6 +892,7 @@ textarea:focus {
 
 .cardfan {
 	position: relative;
+	margin-bottom: 400px;
 }
 
 .card-deck {
@@ -923,10 +920,77 @@ textarea:focus {
 	transform: rotate(-15deg) translate(-15px, -15px);
 } 
 
+.tooltip-space {
+	margin-bottom: 100px;
+}
+
+.tooltip {
+	display: inline;
+	position: relative;
+}
+
+.tooltip:after,
+.tooltip:before {
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+}
+
+.tooltip:hover:after {
+	background: rgba(255, 0, 136,.9);
+	border-radius: 5px;
+	bottom: 26px;
+	color: #fff;
+	content: attr(title); /*oh snap! title attribute of the link*/
+	left: 30%;
+	opacity: 1;
+	padding: 15px 15px;
+	position: absolute;
+	text-align: center;
+	z-index: 5;
+	width: 250px;
+
+}
+.tooltip:hover:before {
+	border: solid;
+	border-color: #F08 transparent;
+	border-width: 6px 6px 0 6px;
+	bottom: 20px;
+	content: "";
+	left: 50%;
+	opacity: 1;
+	position: absolute;
+	z-index: 6;
+}
+
+.filterimage {
+	-webkit-transition: all .3s ease-in-out;
+}
+
+.filterimage:hover {
+	-webkit-filter: contrast(4) invert(.8);
+			filter: contrast(4) invert(.8);
+}
+
+.fold { 
+	width: 400px;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
 
 
-
-
+/*
+.triangle {
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: 70px solid #fff;
+	border-right: 70px solid #fff;
+	border-left: 70px solid #f08;
+	border-bottom: 70px solid #f08;
+} */
 .room {
 	height: 900px;
 }

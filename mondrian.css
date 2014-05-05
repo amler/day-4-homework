@@ -38,13 +38,10 @@
 .yellow1-row1 {
 	height: 71px;
 	width: 33px;
-
 	position: absolute;
 	top: 0;
 	left: 78px;
 	background-color: #f9f2b6;
-	@include filter-gradient(#f9f2b6, #fcfaed, horizontal);
-	@include background-image(linear-gradient(left top,  #f9f2b6 0%,#fcfaed 100%));
 	transition: all 1s ease;
 	z-index: 100;
 }
@@ -57,9 +54,6 @@
 	top: 0;
 	left: 78px;
 	background-color: #fcfaed;
-	@include filter-gradient(#fcfaed, #f4ecad, horizontal);
-	@include background-image(radial-gradient(center, ellipse cover,  #fcfaed 0%,#f4ecad 100%));
-
 }
 
 .yellow2-row1 {
