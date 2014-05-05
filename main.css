@@ -929,12 +929,6 @@ textarea:focus {
 	position: relative;
 }
 
-.tooltip:after,
-.tooltip:before {
-	opacity: 0;
-	-webkit-transition: opacity 1s ease-in-out;
-}
-
 .tooltip:hover:after {
 	background: rgba(255, 0, 136,.9);
 	border-radius: 5px;
@@ -942,12 +936,15 @@ textarea:focus {
 	color: #fff;
 	content: attr(title); /*oh snap! title attribute of the link*/
 	left: 30%;
-	opacity: 1;
 	padding: 15px 15px;
 	position: absolute;
 	text-align: center;
 	z-index: 5;
 	width: 250px;
+	-webkit-animation-duration: .5s;
+	        animation-duration: .5s;
+	-webkit-animation-name: flash;
+	        animation-name: flash;
 
 }
 .tooltip:hover:before {
@@ -957,12 +954,16 @@ textarea:focus {
 	bottom: 20px;
 	content: "";
 	left: 50%;
-	opacity: 1;
 	position: absolute;
 	z-index: 6;
+	-webkit-animation-duration: .5s;
+	        animation-duration: .5s;
+	-webkit-animation-name: flash;
+	        animation-name: flash;
 }
 
 .filterimage {
+	width: 820px;
 	-webkit-transition: all .3s ease-in-out;
 }
 
@@ -972,14 +973,15 @@ textarea:focus {
 }
 
 .fold { 
-	width: 400px;
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
+	position: relative;
+	width: 820px;
+
 }
 
 
-/*
 .triangle {
 	height: 0;
 	width: 0;
@@ -990,9 +992,106 @@ textarea:focus {
 	border-right: 70px solid #fff;
 	border-left: 70px solid #f08;
 	border-bottom: 70px solid #f08;
-} */
-.room {
-	height: 900px;
+	-webkit-transition: all .3s ease;
+}
+.fold:hover .triangle { 
+	border-top: 0px solid #fff;
+	border-right: 0px solid #fff;
+	border-left: 0px solid #f08;
+	border-bottom: 0px solid #f08;
+}
+.caption {
+	background-color: #666;
+	color: #fff;
+	margin: 0;
+	padding: 20px;
+	height: 420px;
+	width: 780px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 1px 3px #050B26;
+}
+.caption img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 1s ease-in-out;
 }
 
+.caption:hover img {
+	-webkit-transform: rotate(90deg) translate(100%, 100%);
+			transform: rotate(90deg) translate(100%, 100%);
+}
+.imagecontainer {
+	height: 990px;
+	width: 325px;
+	margin: 100px 0 0 0;
+	padding: 0;
+	position: relative;
+	-webkit-perspective: 1000;
+			perspective: 1000;
+}
 
+.perspective {
+	height: 990px;
+	position: relative;
+	width: 325px;
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+}
+
+.zach {
+	background: url(./img/zach.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 330px;
+	width: 325px;
+	-webkit-transform: rotateY(45deg);
+			transform: rotateY(45deg);
+	-webkit-transition: 0.5s;
+			transition: 0.5s;
+}
+
+.surferdude {
+	background: url(./img/surfer-dude.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 330px;
+	width: 325px;
+	-webkit-transform: rotateY(45deg);
+			transform: rotateY(45deg);
+	-webkit-transition: 0.5s;
+			transition: 0.5s;
+}
+
+.beerflight {
+	background: url(./img/flight.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 330px;
+	width: 325px;
+	-webkit-transform: rotateY(45deg);
+			transform: rotateY(45deg);
+	-webkit-transition: 0.5s;
+			transition: 0.5s;
+}
+
+.zach:hover {
+	-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+}
+
+.surferdude:hover {
+	-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+}
+
+.beerflight:hover {
+	-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+}
+
+.room {
+	margin-bottom: 400px;
+}
