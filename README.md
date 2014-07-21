@@ -1,6 +1,6 @@
 #30 CSS Animations
 ==============
-Day 4 homework at the Iron Yard was to explore CSS effects. I practice CSS3 animations and transform. For one of my examples, I explored recreating a Mondrian painting by practing position absolute.
+Day 4 homework at the Iron Yard was to explore CSS effects. I practiced CSS3 animations and transform. For one of my examples, I explored recreating a Mondrian painting by practing position absolute.
 
 ### References
 ==============
